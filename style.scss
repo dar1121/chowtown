@@ -1,0 +1,203 @@
+body {
+    margin: 0;
+    background-color:#fff;
+}
+
+
+.particle {
+    position: absolute;
+    border-radius: 50%;
+}
+
+@for $i from 1 through 30 {
+    @keyframes particle-animation-#{$i} {
+        100% {
+            transform: translate3d((random(90) * 1vw), (random(90) * 1vh), (random(100) * 1px));
+        }
+    }
+    
+    .particle:nth-child(#{$i}){
+        animation: particle-animation-#{$i} 60s infinite;
+        $size: random(5) + 5 + px;
+        opacity: random(100)/100;
+        height: $size;
+        width: $size;
+        animation-delay: -$i * .2s;
+        transform: translate3d((random(90) * 1vw), (random(90) * 1vh), (random(100) * 1px));
+        background: hsl(random(360), 70%, 50%);
+    }
+}
+
+@font-face {
+    font-family: "headers";
+    src:url("media/BebasTam.ttf");
+
+}
+
+@font-face {
+    font-family: "body";
+    src:url("https://fonts.gstatic.com/s/opensans/v15/mem8YaGs126MiZpBA-UFWJ0bf8pkAp6a.woff2");
+
+}
+
+#banner.home {
+    height: 600px;
+    height: -webkit-calc(100vh);
+    height: calc(100vh);
+    background-color:#cecece;
+}
+
+
+#title.home {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#searchbox.home {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width:509px;
+  -webkit-align-content: center;
+  align-content: center;
+}
+
+#dropdown.home {
+  position: absolute;
+  right:0px;
+  color:#f62f29;
+}
+
+
+
+#banner.restaurants {
+    height: 100px;
+    background-color:#cecece;
+}
+
+
+#title.restaurants {
+  position: absolute;
+  left: 22px;
+  top: 22px;
+  transform: translate(0, -35%);
+}
+
+#searchbox.restaurants {
+  position: absolute;
+  left: 266px;
+  top: 24px;
+  width:calc(100% - 500px);
+}
+
+#dropdown.restaurants {
+  position: absolute;
+  right:0px;
+  color:#f62f29;
+}
+
+#flex-container.restaurants { 
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   justify-content: center;
+   height: 600px;
+   margin:20px;
+ }
+
+#flex-item.restaurants {
+  width: 350px;
+  height:250px;
+  background-color: rgba(205,205,205,60);
+  padding: 12px;
+  margin: 30px;
+
+}
+
+#flex-item.restaurants#hover {
+  width: 350px;
+  height:250px;
+  background-color: rgba(205,205,205,80);
+  padding: 12px;
+  margin: 30px;
+}
+
+
+h1.home {
+  font-family: "headers";
+  color:#f62f29;
+  font-size:120px;
+  align: center;
+}
+h1.restaurants {
+  font-family: "headers";
+  color:#f62f29;
+  font-size:70px;
+  align: center;
+}
+p.restaurantName {
+  font-family: "body", sans-serif;
+  color:#0c1014;
+  font-size:20px;
+  margin:0;
+}
+
+
+form{
+
+}
+
+
+input[type=text] {
+      font-size:12px;
+      font-family: "body", sans-serif;
+      background-color: #fff;
+      border:2px solid #f62f29;
+      color: #2b2b2b;
+      padding: 14px 14px 14px 50px;
+      margin: 0;
+      width: calc(100% - 200px);
+      background-image: url('media/locationred.png');
+      background-repeat: no-repeat;
+      background-size: auto 70%;
+      background-position-y: center;
+      background-position-x: 8px;
+}
+
+
+input[type=submit] {
+      font-size:12px;
+      font-family: "body", sans-serif;
+      background-color: #fff;
+      border: 2px solid #f62f29;
+      color: #2b2b2b;
+      padding: 14px 16px 14px 16px;
+      text-decoration: none;
+      margin: 0;
+      margin-left:4px;
+      cursor: pointer;
+      width:100px;
+      text-align:center;
+}
+
+p#savedAddress {
+      font-size:12px;
+      font-family: "body", sans-serif;
+      background-color: #fff;
+      border:2px solid #f62f29;
+      color: #2b2b2b;
+      padding: 14px 32px 14px 50px;
+      margin: 0;
+      width: 100%;
+      background-image: url('media/locationred.png');
+      background-repeat: no-repeat;
+      background-size: auto 70%;
+      background-position-y: center;
+      background-position-x: 8px;
+}
+}
+
+

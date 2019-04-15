@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title>Checos - Chowtown</title>
+
+	  <link rel="stylesheet" type="text/css" href="style.css">
+	  <link rel="stylesheet" href="https://use.typekit.net/dwv8wli.css">
+    <script src="sumbitOrder.js"> </script>
+
+
+	<script>
+    var y= window.localStorage.getItem('addressStorage');
+    console.log(y);
+  </script>
+</head>
+<body>
+
+<div id="banner" class="restaurants">
+
+    <div id="title" class="restaurants"> 
+
+    <div id ="searchbox" class="restaurants">
+      <form>
+      <p id="savedAddress"> 
+        <script type="text/javascript">  document.write(y); </script>
+      </p>
+      </form>
+    </div>
+
+</div>
+
+</div>
+<div id="container" class="menu">
+  <img src="media/porktaco.jpg" class="menuimg">
+  <div id="restaurantblurb" class="menu">
+    <p id="restaurantname" class="menu"> Checo's </p>
+    <p id="restaurantblurb" class="menu"> $ • Mexican • 30-40min • $5 delivery fee</p>
+    <hr>
+
+<form name="myMenu" action="checkout.html" onsubmit="return submitOrder()" method="post">
+<input id="toggle1" type="checkbox" class="check" name="item" value="Tacos" onclick="myTaco();">
+  <label for="toggle1">Tacos</label>
+
+  <input id="toggle2" type="checkbox"class="check" name="item" value="Burrito" onclick="myBurrito();">
+  <label for="toggle2">Burrito</label>
+
+  <input id="toggle3" type="checkbox"class="check" name="item" value="Quesadilla" onclick="myQuesadilla();">
+  <label for="toggle3">Quesadilla</label>
+
+<input type="submit" class="order" value="Go to Checkout"></input> 
+</form>
+
+</div>
+
+
+</body>
+</html>

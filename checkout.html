@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title>Checkout - Chowtown</title>
+
+	  <link rel="stylesheet" type="text/css" href="style.css">
+	  <link rel="stylesheet" href="https://use.typekit.net/dwv8wli.css">
+    <script src="sumbitOrder.js"> </script>
+    <script src="checkout.js"></script>
+
+
+	<script>
+    var y= window.localStorage.getItem('addressStorage');
+    console.log(y);
+  </script>
+</head>
+<body>
+
+<div id="banner" class="restaurants">
+
+    <div id="title" class="restaurants"> 
+
+    <div id ="searchbox" class="restaurants">
+      <form>
+      <p id="savedAddress"> 
+        <script type="text/javascript">  document.write(y); </script>
+      </p>
+      </form>
+    </div>
+
+</div>
+
+</div>
+<div id="container" class="checkout">
+<p id="header" class="checkout">Your Order:</p>
+<hr>
+<div id="orderstuff"> </div>
+<div class="orderItem" style="background-color:rgba(235,235,235,0.4);"><strong>Delivery</strong>
+  <p class="price" id="deliveryprice"> </p>
+</div>
+<hr>
+<input type="button" class="addons" onclick="subtract()" value="Bad Weather"></input>
+
+<input type="button" class="addons" onclick="subtract()" value="Longer Route"></input>
+
+<input type="button" class="addons" onclick="subtract()" value="4+ Floor Walk Up"></input>
+
+<input type="button" class="addons" onclick="subtract()" value="I'll be Rude!"></input>
+
+<input type="button" class="addons" onclick="subtract()" value="Make them wait"></input>
+
+<input type="button" class="addons" onclick="subtract()" value="Heavy Order"></input>
+
+<input type="button" class="addons" onclick="subtract()" value="Elevator Broken"></input>
+
+<hr>
+
+<div class="orderItem" style="background-color:rgba(247,172,104,0.7);border:3px solid #fff;">Total
+  <p class="price" id="totalPrice"> </p>
+</div>
+</div>
+
+
+</body>
+</html>
